@@ -1,5 +1,5 @@
 #!/usr/bin/env bash
-
+# This ia a script that reads and displays the content of the file /etc/passwd with a fictional story based on the user information:
 while IFS=":" read -r username _ userid groupid _ _ homedir shell
 do
     user_info=$(grep "^${username}:" /etc/passwd)
