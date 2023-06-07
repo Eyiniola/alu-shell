@@ -18,3 +18,4 @@ case $counter in
 	;;
 esac
    counter=$((counter + 1))
+done 
