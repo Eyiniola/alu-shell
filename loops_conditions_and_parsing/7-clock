@@ -1,0 +1,12 @@
+#!/usr/bin/env bssh
+# This script displays 12 hours and it's minutes
+hour=o
+minutes=1
+while [ $hour -le 12 ]; do
+   while [ $minutes -le 59 ]; do
+	echo -e "$hours\n$minutes"
+    ((minutes++))
+   done 
+   ((hours++))
+   minutes=1
+done
