@@ -1,14 +1,13 @@
 #!/usr/bin/env bash
 # This script displays 12 hours and it's minutes
-hour=o
-minutes=1
-while [ "$hours" -le 12 ]; do
-	echo "Hour: $hour"
-  while [ $minutes -le 59 ]; do
-	  echo "$minutes"
-
-    minutes=$((minutes + 1))
-  done
-  hours=$((hours + 1))
-  minutes=1
+hour=0
+minute=1
+while [ $hours -lt 13 ]; do
+  echo "$hours:$minutes"
+  
+  minutes=$((minutes + 1))
+  if [ $minutes -eq 60 ]; then
+    hours=$((hours + 1))
+    minutes=0
+  fi
 done
