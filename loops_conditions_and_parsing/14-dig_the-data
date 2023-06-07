@@ -1,3 +1,5 @@
 #!/usr/bin/env bash
+
 # This script displays the data in descending order of occurrence, you can modify the previous script by adding sort and uniq commands. Here's the updated Bash script
-awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -rn | awk '{print $1, $2, $3}'
+
+awk '{print $1, $9}' apache-access.log | sort | uniq -c | sort -rn | awk '{print $2, $3, $1}'
