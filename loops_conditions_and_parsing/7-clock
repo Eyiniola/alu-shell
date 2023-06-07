@@ -2,12 +2,11 @@
 # This script displays 12 hours and it's minutes
 hour=0
 minute=1
-while [ $hours -lt 13 ]; do
-  echo "$hours:$minutes"
-  
-  minutes=$((minutes + 1))
-  if [ $minutes -eq 60 ]; then
-    hours=$((hours + 1))
-    minutes=0
-  fi
+while [ $hours -le 12 ]; do
+  while [ $minutes -le 59 ]; do
+    printf "%02d:%02d\n" $hours $minutes
+    ((minutes++))
+  done
+  ((hours++))
+  minutes=1
 done
