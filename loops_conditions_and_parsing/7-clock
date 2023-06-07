@@ -2,9 +2,9 @@
 # This script displays 12 hours and it's minutes
 hour=o
 minutes=1
-while [ $hours -le 12 ]; do
+while [ "$hours" -le 12 ]; do
   while [ $minutes -le 59 ]; do
-    printf "%02d:%02d\n" $hours $minutes
+    printf "%02d:%02d\n" "$hours" $minutes
     ((minutes++))
   done
   ((hours++))
